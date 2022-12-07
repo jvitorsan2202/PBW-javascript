@@ -5,28 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduzindo Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <script>
-        const numero = prompt("Digite um número e tecle enter");
-        if(numero > 0){ //verifica se o número é menor que zero
-            if(numero % 2==0){ //verifica se o numero é par
-                alert("Este número é Par!") //alerta para numero par    
-            }else{
-                alert("Este número é ímpar") //alerta para numero impar
-                alert(numero +" é um número positivo") //alert
-            }
-        }
+    <h1>CALCULADORA SIMPLES</h1>
+    <form action="">
+        <ul>
+            <li>
+                <label for="valor1">Primeiro valor</label>
+                <input type="text" id="valor1">
+            </li>
+            <li>
+                <label for="operacao">Escolhado um dos operadores</label>
+                <select id="operacao">
+                    <option value="+">Adição</option>
+                    <option value="-">Subtração</option>
+                    <option value="/">Divisão</option>
+                    <option id="x">Multiplicação</option>
+                </select>
+            </li>
+            <li>
+                <label for="valor2">Segundo Valor</label>
+                <input type="text" id="valor2">
+            </li>
 
-        if(numero < 0){
-            alert("Este é um número negativo")
-            if(numero % 2==0){ //verifica se o numero é par
-                alert("Este número é Par!") //alerta para numero par    
-            }else{
-                alert("Este número é ímpar") //alerta para numero impar
-                alert(numero +" é um número positivo") //alert
-            }
-        }
-    </script>
+            <ul>
+                <input type="button" onclick="Calcular('valor1', 'valor2', 'operacao', 'saida')"value="Calcular">
+                <input type="button" onclick="Limpar('valor1','valor2')"value="Limpar valores">
+            </ul>
+    </form>
+    <p id="saida"></p>
+
 </body>
+<script>
+    
+</script>
 </html>
